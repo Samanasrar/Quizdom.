@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Interactive Quiz Website</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c9159f0482.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="main">
+		<header class="header">
+		    <h1 class="logo"><span>Q</span>uizdom.</h1>
+		    <nav class="navbar">
+		    	<a href="#" class="current">Home</a>
+		    	<a href="#">About</a>
+		    	<a href="#">Services</a>
+		    	<a href="#">Contact</a>
+		    </nav>
+		</header>
+		<div class="container">
+			<section class="quiz-section">
+				<div class="quiz-box">
+					<h1>Quiz</h1>
+					<div class="quiz-header">
+					<span>Your Progress</span>
+					<span class="header-score">Score: 0/5</span>
+				</div>
+				<h2 class="question-text">What does HTML stand for?</h2>
+				<div class="option-list">
+					<div class="option">
+						<span>A. Hyper Text Multi Language</span>
+					</div>
+					<div class="option">
+						<span>B. Hyper Text Multiple Language </span>
+					</div>
+					<div class="option">
+						<span>C. Hyper Text Markup Language</span>
+					</div>
+					<div class="option">
+						<span>D. Home Text Multi Language</span>
+					</div>
+				</div>
+				<div class="quiz-footer">
+					<span class="question-total">1 of 5 questions</span>
+					<button class="next-btn" onclick="nextQues()">Next</button>
+				</div>
+			 </div>
+			 <div class="result-box">
+			 	<h2>Quiz Result!</h2>
+			 	<div class="percentage-container">
+			 		<div class="circular-progress">
+			 			<span class="progress-value">0%</span>
+			 		</div>
+			 		<span class="score-text">Your score 0 out of 5</span>
+			 	</div>
+			 	<div class="buttons">
+			 		<button class="tryAgain-btn">Try Again</button>
+			 		<button class="goHome-btn">Go To Home</button>
+			 	</div>
+			 </div>
+			</section>
+		<!--------Home----->
+		<section class="home">
+			<div class="home-content">
+				<h1>Welcome to <span>Q</span>uizdom.</h1>
+				<p>Test your knowledge and challenge yourself with our interactive quiz. Earn points, check your scores, and enjoy!</p>
+				<button class="start-btn" onclick="openPopup()">Start Quiz</button>
+			</div>
+		</section>
+		</div>
+	</main>
+	<!------- Popup Box -------->
+    <div class="popup-info" id="popup">
+    	<h2>Quiz Guide</h2>
+    	<span class="info">1.This quiz consists of 5 questions and should take approximately 10 minutes</span>
+    	<span class="info">2.Read the Questions carefully</span>
+    	<span class="info">3.Select the correct answer by clicking it</span>
+    	<span class="info">4.You’ll earn 1 point for each correct answer. Don’t worry; there’s no penalty for incorrect answers!</span>
+    	<span class="info">5.Use the ‘Next’ button to move to the next question.</span>
+    	<span class="info">6.Good luck, and have fun!</span>
+    	<div class="btn-group">
+    	<button class="info-btn exit-btn" onclick="closePopup()">Exit Quiz</button>
+    	<a href="#" class="info-btn continue-btn" onclick="quiz()">Continue</a>
+    </div>
+    </div>
+    
+
+
+	<script src="questions.js"></script>
+	<script src="script.js"></script>
+
+</body>
+</html>
